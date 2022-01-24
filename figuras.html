@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Calculadora de figuras geométricas</title>
+
+    <style>
+        :root{
+    --pink: #FCDCDC;
+    --red: #FB5858;
+    --orange: #FDA990;
+    --yellow: #FBCE86;
+    --white: #FFFFFF;
+    --black: #000000;
+    }
+    .header{
+        margin-bottom: 60px;
+    }
+   .titulo{
+        text-align: center;
+        color: var(--white);
+    }   
+    .primero{
+        text-align: center;
+        color: var(--white);
+    }   
+    body{
+        background-image: url("https://images.pexels.com/photos/374918/pexels-photo-374918.jpeg?cs=srgb&dl=pexels-george-becker-374918.jpg&fm=jpg");
+        font-family: 'Playfair Display', serif;
+        font-family: 'Quicksand', sans-serif;
+    }
+    .cuadradouno{
+        background-color: var(--red);
+        width: 520px;
+        border-radius: 12px;
+        padding: 6px;
+        height: 700px;
+    }
+    .form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 14px;
+    }
+    .container{
+        display: flex;
+    }
+    .container section{
+        margin: 30px;
+        flex-direction: row;
+    }
+  .inputcuadrado{
+        margin-top: 12px;
+        height: 32px;
+        width: 200px;
+        border-radius: 8px;
+        border: none;
+    }  
+  .cuadradito{
+      margin-bottom: 6px;
+      margin-top: 2px;
+      margin-left: 2px; 
+    }
+  .cuadrado1{
+      background-color: var(--white);
+      height: 28px;
+      width: 160;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+      font-family: 'Quicksand', sans-serif;
+    }
+  .cuadrado2{
+      margin-left: 30px;
+      background-color: var(--white);
+      height: 28px;
+      width: 160;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+      font-family: 'Quicksand', sans-serif;
+    }
+  .triangulo{
+        place-content: center;
+        background-color: var(--orange);
+        width: 520px;
+        border-radius: 12px;
+        padding: 6px;
+        height: 700px;
+    }
+  .circulo{
+        background-color: var(--yellow);
+        width: 520px;
+        border-radius: 12px;
+        padding: 6px;
+        height: 700px;
+    }
+  .botones{
+        margin-top: 12px;
+    }
+  </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="titulo">
+            Calculadora de figuras geometricas
+        </h1>
+        <p class="primero">
+            Con esta calculadora saca el perimetro, el area y muchas cosas más con tan solo un click
+        </p>
+    </header>
+
+    <div class="container">
+    <section>
+        <div class="cuadradouno">
+        <h2 class="h2cuadrado">Calcula el área y perímetro de un cuadrado</h2>
+        <label for="inputcuadrado">
+            <div class="cuadradito"> 
+            Escribe cuánto mide cada lado de tu cuadrado:
+        </label>
+        <form class="form">
+          <input class="inputcuadrado" id="inputcuadrado" type="number" placeholder="en centimetros">
+        </form>
+            <button type="button" onclick="calcularperimetrocuadrado()" class="cuadrado1">calcular el perímetro</button>
+            <button type="button" onclick="calcularareacuadrado()" class="cuadrado2">calcula el área</button>     
+            <h3>Resultado del perímetro:</h3>   
+            <p>el perímetro del cuadrado es:</p>
+            <div onclick="calcularperimetrocuadrado()" id="perimetroc"></div>
+            <h3>Resultado del area:</h3>   
+            <p>el area del cuadrado es:</p>
+            <div onclick="calcularareacuadrado()" id="areac"></div>
+        </div>
+        </div>
+        </body>
+    </section>
+        <section>
+        <div class="triangulo">
+            <h2 class="h2cuadrado">Calcula el área y perímetro de un triangulo</h2>
+            <label for="inputtriangulo1">
+                <div class="cuadradito"> 
+                Escribe cuánto mide el lado izquierdo de tu triangulo:
+            </label>
+            <form class="form">
+              <input class="inputcuadrado" id="inputtriangulo1" type="number" placeholder="en centimetros">
+                <div class="cuadradito"> 
+                Escribe cuánto mide el lado derecho de tu triangulo
+              <input class="inputcuadrado" id="inputtriangulo2" type="number" placeholder="en centimetros">
+                <div class="cuadradito"> 
+                Escribe cuánto mide la base de tu triangulo:
+              <input class="inputcuadrado" id="inputtriangulobase" type="number" placeholder="en centimetros">
+                <div class="cuadradito"> 
+                Escribe cuánto mide de altura tu triangulo:
+              <input class="inputcuadrado" id="inputtrianguloaltura" type="number" placeholder="en centimetros">
+               <div class="botones">
+                 <button type="button" onclick="calcularperimetrotriangulo()" class="cuadrado1">calcular el perimetro</button>
+                <button type="button" onclick="calcularareatriangulo()" class="cuadrado1">calcular el área</button>        
+               </div>
+                <h3>Resultado del perímetro:</h3>   
+                <p>el perímetro del triangulo es:</p>
+                <div onclick="calcularperimetrotriangulo()" id="perimetrotri"></div>
+                <h3>Resultado del area:</h3>   
+                <p>el area del triangulo es:</p>
+                <div onclick="calcularareatriangulo()" id="areatri"></div>
+            </form>
+            </div>
+            </div>
+        </section>
+
+ 
+        <section>
+        <div class="circulo">
+            <h2 class="h2cuadrado">Calcula el área y perímetro de un círculo</h2>
+            <label for="inputcirculo">
+                <div class="cuadradito"> 
+                Escribe cuánto mide el radio del círculo:
+            </label>
+            <form class="form">
+              <input class="inputcuadrado" id="inputcirculo" type="number" placeholder="en centimetros">
+            </form>
+            <form>
+                <button type="button" onclick="calculardiametrocirculo()" class="cuadrado1">calcular el diametro</button>
+                <button type="button" onclick="calcularperimetrocirculo()" class="cuadrado1">calcular el perimetro</button>
+                <button type="button" onclick="calcularareacirculo()" class="cuadrado1">calcular el área</button>     
+                <h3>Resultado del diametro:</h3>   
+                <p>el diametro del círculo es:</p>
+                <div onclick="calculardiametrocirculo()" id="diametrocir"></div>
+                <h3>Resultado del perímetro:</h3>   
+                <p>el perímetro del círculo es:</p>
+                <div onclick="calcularperimetrocirculo()" id="perimetrocir"></div>
+                <h3>Resultado del area:</h3>   
+                <p>el area del círculo es:</p>
+                <div onclick="calcularareacirculo()" id="areacir"></div>
+            </form>
+            </div>
+            </div>
+        </section>
+   </div>
+
+    <script src="figuras.js"></script>
+</body>
+</html>
