@@ -1,0 +1,15 @@
+:root{
+    --pink: #FCDCDC;
+    --red: #FB5858;
+    --orange: #FDA990;
+    --yellow: #FBCE86;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+body{
+ background-color: var(--pink);
+}
+.titulo{
+  text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
